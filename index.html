@@ -22,9 +22,9 @@
             loading="lazy"
           />
         </a>
-        <nav class="header__menu hidden-mobile">
+        <nav class="header__menu">
           <ul class="header__menu-list">
-            <li class="header-menu-item">
+            <li class="header__menu-item">
               <a href="/" class="header__menu-link">О компании</a>
             </li>
             <li class="header-menu-item">
@@ -47,9 +47,24 @@
             </li>
           </ul>
         </nav>
-        <input type="text" class="stroke" />
-        <select name="" id=""></select>
+        <input type="text" class="header__input header__stroke" id="text" placeholder="Поиск" />
+        <select class="header__select" required>
+          <option value="ru">Ru</option>
+          <option value="eng">Eng</option>
+        </select>
       </div>
     </header>
+    <main class="contant">
+        <section class="main__info">
+          <div class="main__info__list">
+            <h1 class="main__info__list-name"> Тавимский морской порт VISMA</h1>
+            <div class="main__info__list-info">
+              <p>Vel posuere nibh odio placerat massa vel tellus tortor. Varius eget nunc scelerisque etiam felis facilisi ante viverra sem. Nunc eros elementum.</p>
+            </div>
+            <a href="/" class="main__info__list-link">о компании</a>
+          </div>
+          <!-- <nav class="header__info-item"></nav> -->
+        </section>
+    </main>
   </body>
 </html>
