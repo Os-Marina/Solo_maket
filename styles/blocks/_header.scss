@@ -1,15 +1,15 @@
 .header {
+    
     display: flex;
     padding-top: 40px;
-
-    flex-wrap: wrap;
+    
 
     @include tablet {
         // padding-top: 20px;
     }
 
     &__inner {
-        max-width: var(--container-width-pag);
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,26 +22,33 @@
     }
 
     &__logo {
+        width: 108px;
+        height: 30px;
         // display: flex;
         // margin-left: auto;
         // flex-wrap: wrap;
 
-        @include tablet {
-            flex-shrink: 0;
-            max-width: 95px;
-            margin-left: 20px;
-        }
+        // @include tablet {
+        //     flex-shrink: 0;
+        //     max-width: 95px;
+        //     margin-left: 20px;
+        // }
     }
 
     &__menu{
+        height: 22px;
+        margin: 0px 10px;
         // margin-left: auto;
         // max-width: 6;
         // font-size: 16px;
 
         &-list {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            column-gap: 30px;
+            gap: 30px;
+            align-content: flex-start;
+            
+            
 
             // @include tablet {
             //     justify-content: center;
@@ -55,12 +62,16 @@
             // }
         }
 
-        &-link{
-
+        &-item{
             position: relative;
-            display: inline-flex;
-            align-items: center;
-            height: 30px;
+            display:flex;
+            white-space: nowrap;
+            
+            // align-items: center;
+            
+            // text-align: left;
+
+            // height: 30px;
 
             @include hover {
                 &::after{
@@ -88,8 +99,9 @@
             // }
         }
     }
+
     &__input{
-        max-width: 194px;
+        // width: 194px;
         display: inline;
         position: relative;
         border: none;
@@ -100,12 +112,11 @@
         &:focus {
             outline: none !important;
             border-bottom: 2px solid var(--color-dark-purple);
-
         }
 
-        @include desktop {
-            max-width: 150px;
-        }
+        // @include desktop {
+        //     max-width: 150px;
+        // }
 
         // &::after {
         //     content: '';
@@ -114,22 +125,25 @@
         //     border-bottom: 2px solid var(--color-light-gray);
         // }
     }
+    
     &__select {
         position: relative;
         @include fluid-text (16, 14);
         // max-width: auto;
-       
+        
+        // width: auto;
         height: 22px;
         text-transform: uppercase;
         font-weight: bold;
         border: none;
         appearance: none;
         background: url(/img/ico/check.svg) right no-repeat;
-        // width: 40px;
+        padding-right: 13px;
 
         &:focus {
             outline: none;
             border: 2px solid var(--color-dark-purple);
+
         }
 
         // @include desktop {

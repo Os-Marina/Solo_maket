@@ -1,15 +1,110 @@
 .main{
     &__info {
-        width: 1920px;
         height: 750px;
-        background-image: url(/img/first-screen.jpg);
-        background-size: contain;
-        height: 750px;
+        background: url(/img/first-screen.jpg) no-repeat center center / cover;
+        
+        &__list{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // margin: 0 312px 0 312px;
 
-        &__list-link {
-            text-transform: uppercase;
-           color: var(--color-light);
+            &__information{
+
+                max-width: var(--container-max-widht);
+                
+                margin-right: 134px;
+
+                &-text {
+                    // padding-right: 20px;
+                    margin: 40px 190px 60px 0;
+                    letter-spacing: normal;
+
+                    line-height: 140%;
+                    text-align: justify;
+
+                }
+
+                &-link {
+                    position: relative;
+                    color: var(--color-light);
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin-right: 30px;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 30px;
+                        aspect-ratio: 1;
+                        background: url(/img/ico/arrow.svg) right no-repeat;
+                        margin: -7px 140px;
+
+
+                    }
+                    
+                }
+            }
+
+            &__services {
+                max-width: calc(var(--container-widht) - var(--container-max-widht) * 2);
+                display: flex;
+
+                &__sched{
+                    display: flex;
+                    
+                    justify-content: center;
+                    align-items: center;
+                    // flex-shrink: 1;
+                    flex-wrap: wrap;
+
+                    gap: 24px;
+                    color: var(--color-light);
+
+                    &-list {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        width: 300px;
+                        aspect-ratio: 1;
+                        background-color: var(--color-blue);
+                        border-radius: var(--border-radius);
+                        padding: 30px 35px 30px 35px;
+
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 1.5px;
+
+                        
+
+                        &-link {
+                            text-align: justify;
+                            letter-spacing: 0;
+                            text-transform: none;
+                            // font-weight: bold;
+                            font-size: 19px;
+
+
+                        }
+                    
+                        
+                    }
+
+    
+                }
+
+            }
+
+
         }
+        
+
+
        
 
    

@@ -27,12 +27,15 @@
 
     --transition-duration: 0.2s;
 
-    --container-width: 1920px;
-    --container-width-pag: 1296px;  
-    --container-padding-x: 312px;
+    --container-width: 1440px;
+    // --container-width-pag: 1296px;  
+    // --container-padding-x: 312px;
+    --container-max-widht: 526px;
 
     --section-padding-y: 75px;
 
     --font-family-base: 'PTSans', sans-serif;
+
+    --border-radius: 20px;
 
 }

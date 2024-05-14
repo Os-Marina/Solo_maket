@@ -172,15 +172,15 @@ svg * {
   --image-width: 306px;
   --image-height: 214px;
   --transition-duration: 0.2s;
-  --container-width: 1920px;
-  --container-width-pag: 1296px;
-  --container-padding-x: 312px;
+  --container-width: 1440px;
+  --container-max-widht: 526px;
   --section-padding-y: 75px;
   --font-family-base: "PTSans", sans-serif;
+  --border-radius: 20px;
 }
 
 .container {
-  max-width: calc(var(--container-width-pag) + var(--container-padding-x) * 2);
+  max-width: var(--container-width);
   margin-inline: auto;
 }
 
@@ -266,10 +266,8 @@ h3 {
 .header {
   display: flex;
   padding-top: 40px;
-  flex-wrap: wrap;
 }
 .header__inner {
-  max-width: var(--container-width-pag);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -283,36 +281,36 @@ h3 {
          column-gap: 30px;
   }
 }
-@media (max-width: 1023px) {
-  .header__logo {
-    flex-shrink: 0;
-    max-width: 95px;
-    margin-left: 20px;
-  }
-}
-.header__menu-list {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-}
-.header__menu-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
+.header__logo {
+  width: 108px;
   height: 30px;
 }
+.header__menu {
+  height: 22px;
+  margin: 0px 10px;
+}
+.header__menu-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  align-content: flex-start;
+}
+.header__menu-item {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+}
 @media (hover: hover) {
-  .header__menu-link:hover::after {
+  .header__menu-item:hover::after {
     width: 100%;
   }
 }
 @media (hover: none) {
-  .header__menu-link:active::after {
+  .header__menu-item:active::after {
     width: 100%;
   }
 }
-.header__menu-link::after {
+.header__menu-item::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -324,7 +322,6 @@ h3 {
   transition-duration: 0.2s;
 }
 .header__input {
-  max-width: 194px;
   display: inline;
   position: relative;
   border: none;
@@ -335,11 +332,6 @@ h3 {
 .header__input:focus {
   outline: none !important;
   border-bottom: 2px solid var(--color-dark-purple);
-}
-@media (max-width: 1920px) {
-  .header__input {
-    max-width: 150px;
-  }
 }
 .header__select {
   position: relative;
@@ -352,6 +344,7 @@ h3 {
      -moz-appearance: none;
           appearance: none;
   background: url(/img/ico/check.svg) right no-repeat;
+  padding-right: 13px;
 }
 .header__select:focus {
   outline: none;
@@ -359,13 +352,71 @@ h3 {
 }
 
 .main__info {
-  width: 1920px;
   height: 750px;
-  background-image: url(/img/first-screen.jpg);
-  background-size: contain;
-  height: 750px;
+  background: url(/img/first-screen.jpg) no-repeat center center/cover;
 }
-.main__info__list-link {
-  text-transform: uppercase;
+.main__info__list {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__info__list__information {
+  max-width: var(--container-max-widht);
+  margin-right: 134px;
+}
+.main__info__list__information-text {
+  margin: 40px 190px 60px 0;
+  letter-spacing: normal;
+  line-height: 140%;
+  text-align: justify;
+}
+.main__info__list__information-link {
+  position: relative;
   color: var(--color-light);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+.main__info__list__information-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  aspect-ratio: 1;
+  background: url(/img/ico/arrow.svg) right no-repeat;
+  margin: -7px 140px;
+}
+.main__info__list__services {
+  max-width: calc(var(--container-widht) - var(--container-max-widht) * 2);
+  display: flex;
+}
+.main__info__list__services__sched {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  color: var(--color-light);
+}
+.main__info__list__services__sched-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  aspect-ratio: 1;
+  background-color: var(--color-blue);
+  border-radius: var(--border-radius);
+  padding: 30px 35px 30px 35px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.main__info__list__services__sched-list-link {
+  text-align: justify;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 19px;
 }/*# sourceMappingURL=styles.css.map */
