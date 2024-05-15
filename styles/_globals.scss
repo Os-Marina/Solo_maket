@@ -22,7 +22,7 @@ p {
     color: var(--color-light);
 }
 
-h1, h2, h3 {
+h1, h3 {
     font-weight: 700;
     color: var(--color-light);
 }
@@ -33,6 +33,7 @@ h1 {
 
 h2 {
     @include fluid-text(40, 35);
+    color: var(--color-dark-gray);
 }
 
 h3 {

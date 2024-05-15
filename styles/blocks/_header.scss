@@ -1,37 +1,26 @@
 .header {
     
     display: flex;
-    padding-top: 40px;
+    height: 110px;
     
 
-    @include tablet {
-        // padding-top: 20px;
-    }
+    // @include tablet {
+    //     // padding-top: 20px;
+    // }
 
     &__inner {
-        
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        column-gap: 113px;
-        padding-bottom: 40px;
-
-        @include tablet {
-            column-gap: 30px;
-        }
-    }
-
-    &__logo {
-        width: 108px;
-        height: 30px;
-        // display: flex;
-        // margin-left: auto;
-        // flex-wrap: wrap;
+        // align-content: space-between;
+        // column-gap: 145px;
+        // padding-bottom: 40px;
+        // margin-top: 40px;
+        // margin-bottom: 40px;
 
         // @include tablet {
-        //     flex-shrink: 0;
-        //     max-width: 95px;
-        //     margin-left: 20px;
+        //     column-gap: 30px;
         // }
     }
 
@@ -47,8 +36,6 @@
             align-items: center;
             gap: 30px;
             align-content: flex-start;
-            
-            
 
             // @include tablet {
             //     justify-content: center;
@@ -58,7 +45,6 @@
             // }
 
             // @include tablet {
-
             // }
         }
 
@@ -66,12 +52,6 @@
             position: relative;
             display:flex;
             white-space: nowrap;
-            
-            // align-items: center;
-            
-            // text-align: left;
-
-            // height: 30px;
 
             @include hover {
                 &::after{
@@ -91,7 +71,6 @@
                 background-color: var(--color-dark-purple);
                 // color: var(--color-dark-purple);
                 transition-duration: 0.2s;
-                
             }
 
             // @include tablet {
@@ -100,38 +79,45 @@
         }
     }
 
-    &__input{
-        // width: 194px;
-        display: inline;
-        position: relative;
-        border: none;
-        border-bottom: 2px solid var(--color-light-gray);
-        background: url(/img/ico/glass.svg) left/10% no-repeat;
-        padding-left: 35px;
+    &__glass {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &:focus {
-            outline: none !important;
-            border-bottom: 2px solid var(--color-dark-purple);
+        &-icon{
+            width: 24px;
+            aspect-ratio: 1;
         }
 
-        // @include desktop {
-        //     max-width: 150px;
-        // }
+        &-input{
+            margin-left: 20px;
+            border: none;
+            border-bottom: 2px solid var(--color-light-gray);
 
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     width: 82%;
-        //     border-bottom: 2px solid var(--color-light-gray);
-        // }
+    
+            &:focus {
+                outline: none !important;
+                border-bottom: 2px solid var(--color-dark-purple);
+            }
+    
+            // @include desktop {
+            //     max-width: 150px;
+            // }
+    
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     width: 82%;
+            //     border-bottom: 2px solid var(--color-light-gray);
+            // }
+        }
+
     }
+ 
     
     &__select {
         position: relative;
         @include fluid-text (16, 14);
-        // max-width: auto;
-        
-        // width: auto;
         height: 22px;
         text-transform: uppercase;
         font-weight: bold;

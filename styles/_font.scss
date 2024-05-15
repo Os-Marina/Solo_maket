@@ -1,14 +1,14 @@
 @font-face{
     font-family: 'PTSans';
-    src: url('../fonts/PTSans-Regular.woff2') format('woff2');
+    src: url('../font/PTSans-Regular.woff2') format('woff2');
     font-weight: 400px;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face{
-    font-family: 'PTSans';
-    src: url('../fonts/PTSans-Bold.woff2') format('woff2');
+    font-family: 'PTSans-Bold';
+    src: url('../font/PTSans-Bold.woff2') format('woff2');
     font-weight: 700px;
     font-style: normal;
     font-display: swap;
