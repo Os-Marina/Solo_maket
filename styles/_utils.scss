@@ -9,6 +9,10 @@
     // margin-bottom: 150px;
 }
 
+.indent-company{
+    padding-top: 100px;
+}
+
 .button {
     
     display: flex;
@@ -31,6 +35,14 @@
     letter-spacing: 1px;
 
     cursor: pointer;
+
+    .hover{
+        &:hover {
+        color: var(--color-light-gray);
+        background-color: var(--color-dark-blue);
+        transition-duration: var(--transition-duration)
+        }
+    }
 
     
 }

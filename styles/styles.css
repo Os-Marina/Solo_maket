@@ -56,10 +56,6 @@ dl):where([class]) {
   Убираем стандартный маркер маркированному списку,
   у которого есть атрибут class
  */
-:where(ul[class]) {
-  list-style: none;
-}
-
 /**
   Обнуляем вертикальные внешние отступы параграфа,
   объявляем локальную переменную для внешнего отступа вниз,
@@ -158,6 +154,7 @@ svg * {
   --color-light-purple-tfoot: #9E99C5;
   --color-dark-purple: #3D348B;
   --color-blue: #5DB7DE;
+  --color-dark-blue: #519fc0;
   --table-item-border-radius: 20px;
   --width: 416px;
   --table-item-height: 223px;
@@ -190,6 +187,10 @@ svg * {
   margin-top: 150px;
 }
 
+.indent-company {
+  padding-top: 100px;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -204,6 +205,11 @@ svg * {
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
+}
+.button .hover:hover {
+  color: var(--color-light-gray);
+  background-color: var(--color-dark-blue);
+  transition-duration: var(--transition-duration);
 }
 
 .visually-hidden {
@@ -264,10 +270,6 @@ a {
   color: inherit;
 }
 
-p {
-  color: var(--color-light);
-}
-
 h1, h3 {
   font-weight: 700;
   color: var(--color-light);
@@ -284,6 +286,10 @@ h2 {
 
 h3 {
   font-size: clamp(22px, 1.40625vw, 27px);
+}
+
+h4 {
+  font-size: clamp(15px, 0.9895833333vw, 19px);
 }
 
 .header {
@@ -370,40 +376,36 @@ h3 {
 
 .contant .info {
   height: 750px;
-  background: url(/img/first-screen.jpg) no-repeat center center/cover;
+  background: url(/img/first-screen.jpg) no-repeat center center/cover fixed;
 }
 .contant .info .menu {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 134px;
+  gap: var(--section-margin-right);
 }
 .contant .info .menu__information {
   max-width: var(--container-max-widht);
 }
 .contant .info .menu__information-text {
+  color: var(--color-light);
   margin: 40px 190px 60px 0;
   letter-spacing: normal;
   line-height: 140%;
   text-align: justify;
 }
 .contant .info .menu__information-link {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
   color: var(--color-light);
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-right: 30px;
 }
-.contant .info .menu__information-link::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 30px;
-  aspect-ratio: 1;
-  background: url(/img/ico/arrow.svg) right no-repeat;
-  margin: -7px 140px;
+.contant .info .menu__information-link:hover {
+  color: var(--color-blue);
 }
 .contant .info .menu__services {
   max-width: calc(var(--container-widht) - var(--container-max-widht) * 2);
@@ -411,7 +413,7 @@ h3 {
 }
 .contant .info .menu__services-list {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
@@ -431,6 +433,10 @@ h3 {
   font-weight: bold;
   letter-spacing: 1.5px;
 }
+.contant .info .menu__services-item:hover {
+  color: var(--color-light-gray);
+  background-color: var(--color-dark-blue);
+}
 .contant .info .menu__services-link {
   text-align: justify;
   letter-spacing: 0;
@@ -444,7 +450,7 @@ h3 {
 .contant .service .catalog {
   height: 100%;
   display: flex;
-  gap: 134px;
+  gap: var(--section-margin-right);
   justify-content: space-between;
 }
 .contant .service .catalog__condition {
@@ -493,6 +499,7 @@ h3 {
   justify-content: space-between;
   width: 416px;
   height: 223px;
+  color: var(--color-light);
   background-color: var(--color-dark-purple);
   border-radius: var(--border-radius);
   padding: 30px 35px;
@@ -501,8 +508,11 @@ h3 {
   font-weight: bold;
   letter-spacing: 1.5px;
 }
+.contant .service .catalog__operations-item:hover {
+  color: var(--color-light-gray);
+  background-color: var(--color-light-purple);
+}
 .contant .service .catalog__operations-link {
-  color: var(--color-light);
   text-align: justify;
   letter-spacing: 0;
   text-transform: none;
@@ -510,5 +520,183 @@ h3 {
   line-height: 140%;
 }
 .contant .company {
+  height: 876px;
   background-color: var(--color-light-gray);
+}
+.contant .company .company-body {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--section-margin-right);
+}
+.contant .company .company-body__communication-text {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.contant .company .company-body__communication-content {
+  margin-bottom: 16px;
+  color: var(--color-dark-gray);
+}
+.contant .company .company-body__communication-list {
+  line-height: 140%;
+}
+.contant .company .company-body__communication-list li {
+  margin-left: 20px;
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+.contant .company .company-body__services {
+  row-gap: 30px;
+}
+.contant .company .company-body__services-video {
+  height: 350px;
+  max-height: 350px;
+}
+.contant .company .company-body__services-ship {
+  border-radius: var(--table-item-border-radius);
+}
+.contant .company .company-body__services-button {
+  width: 80px;
+  aspect-ratio: 1;
+  background: url(/img/ico/button-play.svg) center no-repeat;
+  border: none;
+  position: relative;
+  top: -50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.contant .company .company-body__services-button:hover {
+  fill: var(--color-dark-gray);
+}
+.contant .company .company-body__services-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 30px 35px 30px 35px;
+  color: var(--color-light);
+  width: 100%;
+  height: 170px;
+  background-color: var(--color-blue);
+  border-radius: var(--table-item-border-radius);
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+.contant .company .company-body__services-item:hover {
+  color: var(--color-light-gray);
+  background-color: var(--color-dark-blue);
+}
+.contant .company .company-body__services-link {
+  font-size: 19px;
+  text-transform: none;
+}
+.contant .news .body {
+  height: 514px;
+}
+.contant .news .body__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  height: 56px;
+}
+.contant .news .body__header-link {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-dark-purple);
+  letter-spacing: 1.5px;
+}
+.contant .news .body__header-arrow {
+  position: relative;
+  top: 25px;
+  left: 15px;
+  translate: -50% -50%;
+}
+.contant .news .body__catalog {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 24px;
+}
+.contant .news .body__catalog__contant {
+  width: 306px;
+}
+.contant .news .body__catalog__contant-img {
+  border-radius: var(--border-radius);
+}
+.contant .news .body__catalog__contant-date {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 25px 0 15px 0;
+  display: block;
+}
+.contant .news .body__catalog__contant-text {
+  margin-top: 16px;
+}
+
+.footer {
+  background: linear-gradient(var(--color-light-purple) 20%, var(--color-dark-purple) 20%);
+}
+.footer__main {
+  margin-bottom: 150px;
+  height: 604px;
+}
+.footer__header {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 230px;
+  color: var(--color-light);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.footer__header-contacts {
+  display: flex;
+  gap: 30px;
+}
+.footer__header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.footer .body {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 80px;
+}
+.footer .body__card {
+  width: 306px;
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+.footer .body__card-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.footer .body__card-list {
+  list-style-type: none;
+  font-size: 14px;
+}
+.footer .body__card-list li {
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.footer__copyright {
+  color: var(--color-light-purple-tfoot);
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
 }/*# sourceMappingURL=styles.css.map */
