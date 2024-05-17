@@ -36,15 +36,32 @@
 
     cursor: pointer;
 
-    .hover{
-        &:hover {
-        color: var(--color-light-gray);
-        background-color: var(--color-dark-blue);
-        transition-duration: var(--transition-duration)
-        }
-    }
+    // .hover{
+    //     &:hover {
+    //     color: var(--color-light-gray);
+    //     background-color: var(--color-dark-blue);
+    //     transition-duration: var(--transition-duration)
+    //     }
+    // }
 
     
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.insel{
+    
+    width: 416px;
+    height: 35px;
+    border-radius: 5px;
+    
+    margin-top: 20px;
+
+    border: 1px solid var(--color-dark-gray)
 }
 
 .visually-hidden {

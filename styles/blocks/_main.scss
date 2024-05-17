@@ -47,9 +47,7 @@
                     //     margin: -7px 140px;
                     // }
 
-                    &:hover {
-                        
-                       
+                    &:hover {                    
                         color: var(--color-blue);
                     }
                     
@@ -153,6 +151,11 @@
                     max-width: 46px;
                     max-height: 34px;
                     padding: 8px 10px 8px 10px;
+
+                    &:hover {
+                        color: var(--color-light-gray);
+                        background-color: var(--color-dark-blue);
+                    }
                 }
             }
 
@@ -356,6 +359,10 @@
                 font-weight: bold;
                 color: var(--color-dark-purple);
                 letter-spacing: 1.5px;
+
+                &:hover {                    
+                    color: var(--color-blue);
+                }
 
                 // &::before {
                 //     color: black;
