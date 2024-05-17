@@ -471,10 +471,25 @@ h4 {
 .feetback__checkbox-label {
   display: flex;
   align-items: center;
+  padding-left: 1.2em;
 }
-.feetback__checkbox-check {
-  display: none;
-  margin-right: 15px;
+.feetback__checkbox-box {
+  position: relative;
+  margin-top: 0.2em;
+  margin-left: -1em;
+  margin-right: 1em;
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 0 0 0.1em var(--color-light-purple);
+  border-radius: 0.05em;
+  background-color: var(--color-light);
+}
+.feetback__checkbox-check:checked + .feetback__checkbox-box {
+  background-color: var(--color-dark-purple);
+  background-image: url(/img/ico/checkbox.svg);
+}
+.feetback__checkbox-check:focus + .feetback__checkbox-box {
+  box-shadow: 0 0 0 0.2em var(--color-blue);
 }
 .feetback__contacts {
   margin-top: 60px;

@@ -120,13 +120,34 @@
         &-label {
             display: flex;
             align-items: center;
-        }
-        &-check {
-            display: none;
-            margin-right: 15px;
-            &:after{
 
-            }
+            padding-left: 1.2em;
+
+            
+        }
+
+        &-box {
+            position: relative;
+            margin-top: 0.2em;
+            margin-left: -1em;
+            margin-right: 1em;
+            width: 1em;
+            height: 1em;
+            box-shadow: 0 0 0 0.1em var(--color-light-purple);
+            border-radius: 0.05em;
+            background-color: var(--color-light);
+        }
+        &-check:checked + &-box {
+            background-color: var(--color-dark-purple);
+            background-image: url(/img/ico/checkbox.svg);
+                      
+        }
+
+        &-check:focus + &-box{
+            box-shadow: 
+            // 0 0 0 0.1em var(--color-light-purple) 
+            0 0 0 0.2em var(--color-blue);
+            
         }
     }
 
