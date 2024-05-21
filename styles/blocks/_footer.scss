@@ -1,46 +1,78 @@
 .footer{
     background:  linear-gradient(var(--color-light-purple)20%, var(--color-dark-purple)20%);
+    @include mobile {
+        background:  linear-gradient(var(--color-light-purple)28%, var(--color-dark-purple)28%);
+    }
     &__main{
         margin-bottom: 150px;
         height: 604px;
+        @include mobile {
+            height: auto;
+            margin: 0 20px;
+        }
     }
 
     &__header{
         height: 120px;
 
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 230px;
 
         color: var(--color-light);
         font-weight: bold;
         letter-spacing: 1px;
+        @include mobile {
 
-        &-contacts{
-            display: flex;
-            gap: 30px;
+            gap: 10px;
+            justify-content: space-evenly;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
-
+        
         &-text{
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 24px;
+            @include mobile {
+                gap: 10px;
+            }
+        }
+        &-logo {
+            width: 108px;
+            height: 30px;
+            @include mobile {
+                order: -1;
+                width: 25%;
+                height: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                // height: 80px;
+            }
         }
        
+        &-contacts{
+            display: flex;
+            gap: 30px;
+            
+        }
+
     }
 
     .body{
         display: flex;
-        justify-content: center;
-        // align-items: center;
         gap: 24px ;
         margin-top: 80px;
+        @include mobile {
+            
+            margin-top: 30px;
+        }
 
 
         &__card{
-            width: 306px;
+            width: 25%;
 
             color: var(--color-light);
 
@@ -49,11 +81,19 @@
             gap: 30px;
 
             margin-bottom: 80px;
+            @include mobile {
+                margin-bottom: 0;
+                gap: 15px;
+            }
 
             &-title {
                 text-transform: uppercase;
                 font-weight: bold;
                 letter-spacing: 1.5px;
+                @include mobile {
+                    font-size: 12px;
+                    height: 30px;
+                }
             }
 
             &-list{
@@ -63,6 +103,9 @@
                li{
                 margin-bottom: 16px;
                 letter-spacing: 1px;
+                @include mobile {
+                    font-size: 11px;
+                }
                } 
                 
             }
@@ -79,6 +122,11 @@
 
         font-weight: bold;
         letter-spacing: 1px;
+        @include mobile {
+            height: 50px;
+            align-items: center;
+            // margin-top: 30px;
+        }
         
     }
 
