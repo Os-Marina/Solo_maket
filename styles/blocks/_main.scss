@@ -366,6 +366,8 @@
                 &-video{
                     height: 350px;
                     max-height: 350px;
+                    position: relative;
+
                     
                 }
                 
@@ -374,6 +376,7 @@
                     width: 526px;
                     height: 350px;
                     border-radius: var(--table-item-border-radius);
+
                     @include mobile {
                         width: 100%;
                         height: auto;
@@ -381,32 +384,49 @@
                 }
 
                 &-button{
+                    padding: 0;
                     width: 80px;
+                    max-width: 80px;
                     aspect-ratio: 1;
-                    background: url(/img/ico/button-play.svg) center no-repeat;
+                    background-color: transparent;
+                    // background: url(/img/ico/button-play.svg) center/100% no-repeat;
                     border: none;
 
-                    position: relative;
-                    top: -50%;
-                    left: 50%;
+                    position: absolute;
+                    top: 40%;
+                    right: 40%;
 
-                    translate: -50% -50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                    &:hover {
-                        fill: var(--color-dark-gray);
-                        // background-color: var(--color-dark-blue);
-                    }
-                    @include mobile {
-                        // width: 65px;
-                        top: -45%;
-                    }
-
-                    // &:hover{
-                    //     color: var(--color-dark-gray);
-                    //     text-decoration: var(--transition-duration);
-
+                    // &:hover {
+                    //     // fill: var(--color-dark-blue);
+                    //     // background-color: var(--color-dark-blue);
+                    //     stroke: var(--color-dark-blue);
+                    //     fill: var(--color-dark-blue);
                     // }
+                    
+                    @include mobile {
+                        // width: 70%;
+                        top: 25%;
+                        left: 40%;
+                        // background-size: 80%; 
+                    }
 
+                }
+
+                &-icon{
+                    color: var(--color-light);
+                    width: 100%;
+
+                    &:hover{
+                        color: var(--color-blue);
+                    }
+
+                    @include mobile {
+                        width: 70%;
+                    }
                 }
 
 

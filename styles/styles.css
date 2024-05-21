@@ -799,6 +799,7 @@ h4 {
 .contant .company .company-body__services-video {
   height: 350px;
   max-height: 350px;
+  position: relative;
 }
 .contant .company .company-body__services-ship {
   width: 526px;
@@ -812,21 +813,35 @@ h4 {
   }
 }
 .contant .company .company-body__services-button {
+  padding: 0;
   width: 80px;
+  max-width: 80px;
   aspect-ratio: 1;
-  background: url(/img/ico/button-play.svg) center no-repeat;
+  background-color: transparent;
   border: none;
-  position: relative;
-  top: -50%;
-  left: 50%;
-  translate: -50% -50%;
-}
-.contant .company .company-body__services-button:hover {
-  fill: var(--color-dark-gray);
+  position: absolute;
+  top: 40%;
+  right: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .contant .company .company-body__services-button {
-    top: -45%;
+    top: 25%;
+    left: 40%;
+  }
+}
+.contant .company .company-body__services-icon {
+  color: var(--color-light);
+  width: 100%;
+}
+.contant .company .company-body__services-icon:hover {
+  color: var(--color-blue);
+}
+@media (max-width: 768px) {
+  .contant .company .company-body__services-icon {
+    width: 70%;
   }
 }
 .contant .company .company-body__services-item {
