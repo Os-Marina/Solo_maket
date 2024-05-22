@@ -183,12 +183,14 @@ svg * {
   margin-inline: auto;
 }
 
-.indent {
+.indent-margin {
   margin-top: 150px;
+  margin-bottom: 150px;
 }
 
-.indent-company {
+.indent-padding {
   padding-top: 100px;
+  padding-bottom: 110px;
 }
 
 .button {
@@ -391,6 +393,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .header__glass {
@@ -398,11 +401,19 @@ h4 {
   }
 }
 .header__glass-icon {
-  width: 24px;
+  background: transparent;
+  border: none;
+  height: 24px;
   aspect-ratio: 1;
+  position: relative;
+}
+.header__glass-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header__glass-input {
-  margin-left: 20px;
   border: none;
   border-bottom: 2px solid var(--color-light-gray);
 }
@@ -534,7 +545,8 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 80px;
+  gap: 60px;
+  margin: 80px auto 150px auto;
 }
 @media (max-width: 768px) {
   .feetback__body {
@@ -556,7 +568,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 24px;
+  gap: 24px;
   margin-top: 80px;
 }
 @media (max-width: 768px) {
@@ -578,7 +590,7 @@ h4 {
   }
 }
 .feetback__request-name {
-  width: 48%;
+  width: calc(50% - 12px);
 }
 @media (max-width: 768px) {
   .feetback__request-name {
@@ -586,7 +598,7 @@ h4 {
   }
 }
 .feetback__request-textarea {
-  width: 48%;
+  width: calc(50% - 12px);
 }
 @media (max-width: 768px) {
   .feetback__request-textarea {
@@ -613,9 +625,6 @@ h4 {
 .feetback__request-button:hover {
   color: var(--color-light-gray);
   background-color: var(--color-dark-blue);
-}
-.feetback__checkbox {
-  margin-top: 60px;
 }
 .feetback__checkbox-caption {
   color: var(--color-dark-gray);
@@ -656,9 +665,6 @@ h4 {
     width: 80%;
   }
 }
-.feetback__contacts {
-  margin-top: 60px;
-}
 .feetback__contacts-name {
   color: var(--color-dark-gray);
   margin-bottom: 40px;
@@ -688,8 +694,8 @@ h4 {
     width: 80%;
   }
 }
-.feetback__link {
-  margin-top: 64px;
+.feetback__contacts-button {
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -698,12 +704,15 @@ h4 {
   font-weight: bold;
   color: var(--color-dark-purple);
   letter-spacing: 1.5px;
+  width: 50%;
+  border: none;
+  background: transparent;
 }
-.feetback__link:hover {
+.feetback__contacts-button:hover {
   color: var(--color-blue);
 }
 @media (max-width: 768px) {
-  .feetback__link {
+  .feetback__contacts-button {
     margin: 30px 0 30px 0;
   }
 }

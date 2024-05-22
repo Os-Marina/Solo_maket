@@ -183,12 +183,14 @@ svg * {
   margin-inline: auto;
 }
 
-.indent {
+.indent-margin {
   margin-top: 150px;
+  margin-bottom: 150px;
 }
 
-.indent-company {
+.indent-padding {
   padding-top: 100px;
+  padding-bottom: 110px;
 }
 
 .button {
@@ -391,6 +393,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .header__glass {
@@ -398,11 +401,19 @@ h4 {
   }
 }
 .header__glass-icon {
-  width: 24px;
+  background: transparent;
+  border: none;
+  height: 24px;
   aspect-ratio: 1;
+  position: relative;
+}
+.header__glass-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header__glass-input {
-  margin-left: 20px;
   border: none;
   border-bottom: 2px solid var(--color-light-gray);
 }
@@ -536,7 +547,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin: 80px auto 150px auto;
 }
 @media (max-width: 768px) {
   .content__news-body {

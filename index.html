@@ -48,8 +48,8 @@
           </ul>
         </nav>
         <div class="header__glass">
-          <div class="header__glass-icon">
-            <svg
+          <button class="header__glass-icon" type="submit">
+            <svg class="header__glass-image"
               fill="#3D348B"
               width="22"
               height="23"
@@ -60,7 +60,7 @@
                 d="M15.9719 14.7301H14.971L14.6163 14.3882C15.408 13.4689 15.9867 12.386 16.3109 11.2171C16.635 10.0482 16.6966 8.82217 16.4913 7.62668C15.8959 4.10665 12.9566 1.29569 9.40913 0.865182C8.16198 0.707497 6.89525 0.837036 5.7059 1.24389C4.51654 1.65074 3.43607 2.32412 2.54717 3.2125C1.65826 4.10088 0.98449 5.18072 0.5774 6.36938C0.17031 7.55804 0.0406943 8.82402 0.198472 10.0704C0.629232 13.6158 3.44184 16.5534 6.96394 17.1485C8.16012 17.3537 9.3869 17.2921 10.5565 16.9681C11.7261 16.6442 12.8096 16.0658 13.7294 15.2745L14.0715 15.6291V16.6294L19.456 22.0107C19.9754 22.5298 20.8243 22.5298 21.3437 22.0107C21.8632 21.4916 21.8632 20.6432 21.3437 20.1241L15.9719 14.7301ZM8.37024 14.7301C5.21556 14.7301 2.66901 12.185 2.66901 9.03216C2.66901 5.87933 5.21556 3.33427 8.37024 3.33427C11.5249 3.33427 14.0715 5.87933 14.0715 9.03216C14.0715 12.185 11.5249 14.7301 8.37024 14.7301Z"
               />
             </svg>
-          </div>
+          </button>
           <input
             class="header__glass-input"
             type="text"
@@ -130,7 +130,7 @@
         </div>
       </section>
       <section class="service">
-        <div class="catalog container indent">
+        <div class="catalog container indent-margin">
           <div class="catalog__condition">
             <h2 class="catalog__condition-name">Услуги</h2>
             <ul class="catalog__condition-list">
@@ -206,9 +206,9 @@
         </div>
       </section>
       <section class="company">
-        <div class="company-body container indent-company">
+        <div class="company-body container indent-padding">
+          <h2 class="company-body__title">О компании</h2>
           <div class="company-body__communication">
-            <h2 class="company-body__communication-name">О компании</h2>
             <div class="company-body__communication-text">
               <p class="company-body__communication-content">
                 Tristique orci consectetur sit felis. Sed ac auctor tellus
@@ -258,20 +258,20 @@
                 </li>
               </ul>
             </div>
-          </div>
+          <!-- </div> -->
           <div class="company-body__services">
             <div class="company-body__services-video">
+              <button class="company-body__services-button" type="button">
+                <svg class="company-body__services-icon" fill="currentColor" width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M31.6666 31.0833V48.9167C31.6666 50.1945 32.25 51.1667 33.4166 51.8333C34.5833 52.5 35.7222 52.4444 36.8333 51.6667L50.6666 42.8333C51.7222 42.1667 52.25 41.2222 52.25 40C52.25 38.7778 51.7222 37.8333 50.6666 37.1667L36.8333 28.3333C35.7222 27.5556 34.5833 27.5 33.4166 28.1667C32.25 28.8333 31.6666 29.8056 31.6666 31.0833ZM40 73.3333C35.3888 73.3333 31.0555 72.4578 27 70.7067C22.9444 68.9578 19.4166 66.5833 16.4166 63.5833C13.4166 60.5833 11.0422 57.0556 9.29329 53C7.54218 48.9444 6.66663 44.6111 6.66663 40C6.66663 35.3889 7.54218 31.0556 9.29329 27C11.0422 22.9445 13.4166 19.4167 16.4166 16.4167C19.4166 13.4167 22.9444 11.0411 27 9.29C31.0555 7.54112 35.3888 6.66667 40 6.66667C44.6111 6.66667 48.9444 7.54112 53 9.29C57.0555 11.0411 60.5833 13.4167 63.5833 16.4167C66.5833 19.4167 68.9577 22.9445 70.7066 27C72.4577 31.0556 73.3333 35.3889 73.3333 40C73.3333 44.6111 72.4577 48.9444 70.7066 53C68.9577 57.0556 66.5833 60.5833 63.5833 63.5833C60.5833 66.5833 57.0555 68.9578 53 70.7067C48.9444 72.4578 44.6111 73.3333 40 73.3333Z"/>
+                </svg>
+              </button>
               <video
                 src=""
                 class="company-body__services-ship"
                 poster="/img/ship.jpg"
               ></video>
-              <button class="company-body__services-button" type="button">
-                <!-- <img src="/img/ico/button-play.svg" alt="Play button" class="company-body__services-icon"> -->
-                <svg class="company-body__services-icon" fill="currentColor" width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" d="M31.6666 31.0833V48.9167C31.6666 50.1945 32.25 51.1667 33.4166 51.8333C34.5833 52.5 35.7222 52.4444 36.8333 51.6667L50.6666 42.8333C51.7222 42.1667 52.25 41.2222 52.25 40C52.25 38.7778 51.7222 37.8333 50.6666 37.1667L36.8333 28.3333C35.7222 27.5556 34.5833 27.5 33.4166 28.1667C32.25 28.8333 31.6666 29.8056 31.6666 31.0833ZM40 73.3333C35.3888 73.3333 31.0555 72.4578 27 70.7067C22.9444 68.9578 19.4166 66.5833 16.4166 63.5833C13.4166 60.5833 11.0422 57.0556 9.29329 53C7.54218 48.9444 6.66663 44.6111 6.66663 40C6.66663 35.3889 7.54218 31.0556 9.29329 27C11.0422 22.9445 13.4166 19.4167 16.4166 16.4167C19.4166 13.4167 22.9444 11.0411 27 9.29C31.0555 7.54112 35.3888 6.66667 40 6.66667C44.6111 6.66667 48.9444 7.54112 53 9.29C57.0555 11.0411 60.5833 13.4167 63.5833 16.4167C66.5833 19.4167 68.9577 22.9445 70.7066 27C72.4577 31.0556 73.3333 35.3889 73.3333 40C73.3333 44.6111 72.4577 48.9444 70.7066 53C68.9577 57.0556 66.5833 60.5833 63.5833 63.5833C60.5833 66.5833 57.0555 68.9578 53 70.7067C48.9444 72.4578 44.6111 73.3333 40 73.3333Z"/>
-                </svg>
-              </button>
+              
             </div>
             <a href="/" class="company-body__services-item hover">
                 Запрос ставки и условий погрузочно-разгрузочных работ
@@ -282,14 +282,14 @@
             </a>
           </div>
         </div>
+        </div>
       </section>
-
       <section class="news">
-        <div class="body news__wrapper container indent ">
+        <div class="body news__wrapper container indent-margin">
           <div class="body__header news__header ">
               <h2 class="body__header-name news__title">Новости</h2>
               <a href="/" class="body__header-link news__link">
-                Все новости
+                <span class="body__header-text">Все новости</span> 
                 <svg class="body__header-arrow" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="14" stroke="white" stroke-width="2"/>
                   <path d="M14.5001 18.705V15.705H7.8101L7.7876 14.1975H14.5001V11.205L18.2501 14.955L14.5001 18.705Z" fill="white"/>
@@ -344,7 +344,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__main container indent">
+      <div class="footer__main container">
         <div class="footer__main-inner">
           <header class="footer__header">
             <div class="footer__header-text">

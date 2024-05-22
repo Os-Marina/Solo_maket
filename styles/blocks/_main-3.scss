@@ -44,7 +44,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 80px;
+        gap: 60px;
+
+        margin: 80px auto 150px auto;
         @include mobile {
             margin-top: 30px;
             width: 100%;
@@ -74,7 +76,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            row-gap: 24px;
+            gap: 24px;
             margin-top: 80px;
 
             @include mobile {
@@ -97,17 +99,17 @@
 
         }
         &-name {
-            width: 48%;
+            width: calc(100% / 2 - 12px);
 
             @include mobile {
-                width: 80%;
+                width: calc(100% - 20%);
 
             }
         }
         &-textarea {
-            width: 48%;
+            width: calc(100% / 2 - 12px);
             @include mobile {
-                width: 80%;
+                width: (100% - 20%);
                 gap: 15px;
                 display: flex;
                 flex-direction: column;
@@ -136,7 +138,7 @@
     }
 
     &__checkbox {
-        margin-top: 60px;
+        // margin-top: 60px;
         &-caption{
             color: var(--color-dark-gray);
             margin-bottom: 40px;
@@ -191,23 +193,24 @@
     }
 
     &__contacts {
-        margin-top: 60px;
+        // margin-top: 60px;
 
         &-name  {
+
             color: var(--color-dark-gray);
             margin-bottom: 40px;
+
             @include mobile {
                 text-align: center;
             }
         }
         
-     
-
         &-list {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             row-gap: 40px;
+
             @include mobile {
                 justify-content: center;
                 margin-top: 30px;
@@ -215,33 +218,64 @@
         }
         // display: flex;
         &-item{
+
             width: 48%;
+
             @include mobile {
                 width: 80%;
 
             }
         }
-    }
 
+        &-button {
+            // margin-top: 60px;
+            align-self: center;
 
-    &__link{
-        margin-top: 64px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: var(--color-dark-purple);
-        letter-spacing: 1.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            
+            text-transform: uppercase;
+            font-weight: bold;
+            color: var(--color-dark-purple);
+            letter-spacing: 1.5px;
 
-        &:hover {                    
-            color: var(--color-blue);
+            width: 50%;
+            border: none;
+            background: transparent;
+    
+            &:hover {                    
+                color: var(--color-blue);
+            }
+    
+            @include mobile {
+                margin: 30px 0 30px 0;
+            }
         }
-
-        @include mobile {
-            margin: 30px 0 30px 0;
-        }
     }
-
 }
+
+
+    // &__link{
+    //     margin-top: 64px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     gap: 15px;
+    //     text-transform: uppercase;
+    //     font-weight: bold;
+    //     color: var(--color-dark-purple);
+    //     letter-spacing: 1.5px;
+
+    //     &:hover {                    
+    //         color: var(--color-blue);
+    //     }
+
+    //     @include mobile {
+    //         margin: 30px 0 30px 0;
+    //     }
+    // }
+
+
+

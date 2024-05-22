@@ -43,7 +43,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 80px;
+            margin: 80px auto 150px auto;
             @include mobile {
                 // margin-top: 30px;
                 margin: 30px 77px 30px 77px;

@@ -119,21 +119,21 @@
     }
 
     .service{
-        height: 1017px;
+        // height: 1017px;
         background: var(--color-light);
         @include mobile {
             height: auto;
         }
 
         .catalog{
-            height: 100%;
+            // height: 100%;
             display: flex;
             gap: var(--section-margin-right);
             justify-content: space-between;
 
             @include mobile{
                 margin: 30px 20px 30px 20px;
-                gap: 0;
+                // gap: 0;
                 display: block;
             }
 
@@ -293,36 +293,44 @@
     }
 
     .company{
-        height: 876px;
+        // height: 876px;
         background-color: var(--color-light-gray);
 
         .company-body{
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
+            // height: 100%;
+            // display: flex;
+            // justify-content: space-between;
 
             gap: var(--section-margin-right);
 
             @include mobile {
                 // padding-top: 30px;
                 margin: 0 20px 0 20px;
-
-                flex-wrap: wrap;
-                gap: 0;
-                padding-top: 0;
+                padding: 30px 0 30px 0;
             }
 
                        
         
             &__communication{
+                margin-top: 60px;
+                display: flex;
+                gap: 134px;
                 @include mobile {
-                    padding-top: 30px;
+                    padding: 0;
+                    margin-top: 15px;
+                    gap: 0;
+
+                    width: 100%;
+                    flex-wrap: wrap;
                 }
 
                 &-text{
-                    margin-top: 60px;
+                    
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
+                    
+                    flex-wrap: wrap;
 
                     @include mobile {
                         margin-top: 15px;
@@ -355,17 +363,26 @@
             }
 
             &__services {
-                row-gap: 30px;
+                
+                // row-gap: 30px;
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+                gap: 30px;
 
                 @include mobile {
                     display: flex;
-                    height: 315px;
-                    gap: 20px;
+                    align-items: center;
+                    flex-direction: row;
+                    margin-top: 20px;
+                    // height: 315px;
                 }
 
                 &-video{
-                    height: 350px;
-                    max-height: 350px;
+                    display: flex;
+                    // width: 526px;
+                    // height: 350px;
+                    // max-height: 350px;
                     position: relative;
 
                     
@@ -373,8 +390,9 @@
                 
 
                 &-ship {
-                    width: 526px;
-                    height: 350px;
+                    // width: 526px;
+                    // height: 350px;
+                    // width: 100%;
                     border-radius: var(--table-item-border-radius);
 
                     @include mobile {
@@ -385,28 +403,21 @@
 
                 &-button{
                     padding: 0;
-                    width: 80px;
-                    max-width: 80px;
+                    height: 80px;
                     aspect-ratio: 1;
+
                     background-color: transparent;
-                    // background: url(/img/ico/button-play.svg) center/100% no-repeat;
                     border: none;
 
                     position: absolute;
-                    top: 40%;
-                    right: 40%;
+                    top: 50%;
+                    right: 50%;
+                    transform: translate(50%, -50%);
 
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
-                    // &:hover {
-                    //     // fill: var(--color-dark-blue);
-                    //     // background-color: var(--color-dark-blue);
-                    //     stroke: var(--color-dark-blue);
-                    //     fill: var(--color-dark-blue);
-                    // }
-                    
                     @include mobile {
                         // width: 70%;
                         top: 25%;
@@ -418,7 +429,7 @@
 
                 &-icon{
                     color: var(--color-light);
-                    width: 100%;
+                    // width: 100%;
 
                     &:hover{
                         color: var(--color-blue);
@@ -436,7 +447,7 @@
                     flex-direction: column;
                     justify-content: space-between;
 
-                    margin-top: 30px;
+                    // margin-top: 30px;
                     padding: 30px 35px 30px 35px;
                     color: var(--color-light);
 
@@ -460,7 +471,7 @@
 
                     @include mobile {
                         font-size: 0;
-                        width: 350px;
+                        width: calc(100% - 65%);
                     }
 
                 }
@@ -468,6 +479,9 @@
                 &-link{
                     font-size: 19px;
                     text-transform: none;
+                    @include mobile {
+                        font-size: 18px;
+                    }
                 }
             }
 
@@ -491,11 +505,19 @@
                 align-content: center;
                 height: 56px;
 
+                
+
                &-link {
+                height: 100%;
                 text-transform: uppercase;
                 font-weight: bold;
                 color: var(--color-dark-purple);
                 letter-spacing: 1.5px;
+
+                position: relative;
+
+                display: flex;
+                align-items: center;
 
                 &:hover {                    
                     color: var(--color-blue);
@@ -513,11 +535,15 @@
                 // }
                }
 
+               &-text{
+                margin-right: 45px;
+               }
+               
                &-arrow{
-                position: relative;
-                top: 25px;
-                left: 15px;
-                translate: -50% -50%;
+                position: absolute;
+                // top: 25px;
+                right: 0;
+                // translate: -50% -50%;
                }
             }
 
@@ -535,7 +561,7 @@
                 }
 
                 &__contant{
-                    width: 25%;
+                    width: calc(100%/4);
                     @include mobile {
                         width: 48%;
                     }
