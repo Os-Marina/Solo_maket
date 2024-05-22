@@ -838,12 +838,6 @@ h4 {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 768px) {
-  .contant .company .company-body__services-button {
-    top: 25%;
-    left: 40%;
-  }
-}
 .contant .company .company-body__services-icon {
   color: var(--color-light);
 }
